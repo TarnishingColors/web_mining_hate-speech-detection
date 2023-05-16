@@ -19,18 +19,15 @@ PRE_TRAINED_MODEL_NAME = 'bert-base-uncased'  # uncased means this tokenizer wil
 tokenizer = BertTokenizer.from_pretrained(PRE_TRAINED_MODEL_NAME)
 
 
-# class for preprocessing
-class DataCleaner(BaseEstimator, TransformerMixin):
-    def __init__(self, func: callable):
-        self.func = func
+class SeriesConverter(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        pass
 
-    def fit(self, df: pd.DataFrame, y=None, **fit_params):
+    def fit(self, X, y=None):
         return self
 
-    def transform(self, df: pd.DataFrame, y=None, **transform_params):
-        _df = df.copy()
-        _df["tweet"] = _df["tweet"].transform(lambda x: self.func(x))
-        return _df
+    def transform(self, X, y=None):
+        return X['tweet']
 
 
 class TextCleaner(TransformerMixin, BaseEstimator):
@@ -117,7 +114,7 @@ class Vectorizer(BaseEstimator, TransformerMixin):
         self.config = {
             'add_special_tokens': True,
             'padding': 'max_length',
-            'max_length': 32,
+            'max_length': 4,
             'truncation': True,
             'pad_to_max_length': True,
             'return_attention_mask': False,
