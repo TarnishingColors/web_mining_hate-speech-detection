@@ -1,0 +1,16 @@
+name: web_mining
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - transformers
+  - torch
+  - eli5
+  - imbalanced-learn
+  - xgboost
+  - notebook
