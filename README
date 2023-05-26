@@ -4,8 +4,10 @@ Please, download the stacking model from Google Drive if you want to run it.
 
 Stacking pipeline: https://drive.google.com/file/d/1yrBSVB5GGK_aBZtw1YCyESgaXQC4RLlW/view?usp=share_link
 
-In case you want to run `assemble_models_with_bert.ipynb`, you will need to download saved bert model and put it into `bert_model` folder.
+In case you want to run `assemble_models_with_bert.ipynb`, you will need to download saved bert model trained on data3 and put it into `bert_model` folder.
 
 Bert model, trained on data3: https://drive.google.com/file/d/10qaYWDqOOdoTxyEePLaF4qN8O6kJId3H/view?usp=share_link
 
-Training bert on data5 for comparison with stacking pipeline: https://colab.research.google.com/drive/1DriTyyWEfoXdD-9J0FtfYOkw3IyZPgJ2?usp=sharing
+We trained bert on data5 for comparison with stacking pipeline.
+
+Bert, trained on data5: https://colab.research.google.com/drive/1DriTyyWEfoXdD-9J0FtfYOkw3IyZPgJ2?usp=sharing
